@@ -1,9 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShopGame.Models;
 
 namespace ShopGame.Controllers
 {
     public class AuthenticationController : Controller
     {
+        ShopContext context;
+
+        public AuthenticationController(ShopContext _context)
+        {
+            this.context = _context;
+        }
+
         public IActionResult Index()
         {
             return View();

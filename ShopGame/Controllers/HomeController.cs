@@ -7,10 +7,11 @@ namespace ShopGame.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        ShopContext db;
+        public HomeController(ILogger<HomeController> logger, ShopContext context)
         {
             _logger = logger;
+            db = context;
         }
 
         public IActionResult Index()
@@ -20,6 +21,7 @@ namespace ShopGame.Controllers
 
         public IActionResult Privacy()
         {
+            var users = db.Users.ToList();
             return View();
         }
 
@@ -28,5 +30,7 @@ namespace ShopGame.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }
