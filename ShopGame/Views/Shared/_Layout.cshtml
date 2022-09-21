@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="~/ShopGame.styles.css" />
     <title>@ViewData["Title"] - ShopGame</title> 
 </head>
-<body>
+<body style="margin:0;">
     <div class="page">
         <header class="header">
             <div class="container">
@@ -58,10 +58,6 @@
         </footer>
     </div>
 
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -5,9 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
+
 .page {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #141111;
 }
 
@@ -18,19 +19,20 @@
 -----------------*/
 .container {
     width: 100%;
-    max-width: 1370px;
+    max-width: 1570px;
     margin: 0 auto;
 }
 
 
 /* HEADER -----------------------
------------------*/
-
+-----------------
+*/
 .header {
     position: absolute;
     top: 0;
+    right: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1030;
     width: 100%;
 }
 
@@ -39,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    /*margin-top: 10px; ЕСЛИ ЕЩЕ РАЗ УВИЖУ ЧТО-ТО ТАКОЕ, ТО Я ТЕБЯ ВЫЕБУ ВО ВСЕ ЩЕЛИ */ 
     height: 100px;
     position: relative;
 }
@@ -97,8 +99,8 @@
 
 
 
-/* NAVIGATION ------------------
-------------*/
+ NAVIGATION ------------------
+------------
 .nav {
     font-size: 19px;
     font-weight: 500;
@@ -148,8 +150,8 @@
 
 
 
-/* MAIN --------------------------
----------------------*/
+ MAIN --------------------------
+---------------------
 
 
 
@@ -161,12 +163,11 @@
 
 
 
-/* FOOTER ------------------------
---------------------------*/
+ FOOTER ------------------------
+--------------------------
 
 
 .footer {
-    position: absolute;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -179,7 +180,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px; Я ЕБАЛ ЧТО ЗА ТЫ ГАВНОЕД. ТЫ ЖЕ БЛЯТЬ ФРОНТЕНД РАЗРБОТЧИК ЧТО ЭТО ЗА ГАВНО. Я ГИТ РАБОТАТЬ ПОЙДУ. С ТАКИМИ НАВЫКАМИ ТЕБЯ НАХУЙ ПОШЛЮТ.*/
 }
 
     .footer__inner:before {
@@ -221,8 +222,8 @@
 
 
 
-/* FOOTER LINK --------------------------
---------------*/
+ FOOTER LINK --------------------------
+--------------
 
 .footer__link {
     font-size: 17px;
