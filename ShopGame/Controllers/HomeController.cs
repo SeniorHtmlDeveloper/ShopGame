@@ -14,6 +14,16 @@ namespace ShopGame.Controllers
             db = context;
         }
 
+        public List<Game> GetGames()
+        {
+            var games = new List<Game>();
+            for(int i = 0; i < 20; i++)
+            {
+                games.Add(new Game() { GameId = i, Name = $"Name{i}", Description = $"Description{i}", Price = 1000 + 100 * i });
+            }
+            return games;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -29,6 +39,12 @@ namespace ShopGame.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Main()
+        {
+            var games = GetGames();
+            return View(games);
         }
 
 
