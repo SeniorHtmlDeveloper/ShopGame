@@ -1,16 +1,16 @@
-﻿@model List<Game>
+﻿@model IEnumerable<Game>
 @{
 
 }
 	<div class="list__card">
-		@for (int i = 0; i < Model.Count(); i++){
+		@foreach(var game in Model){
 			<div class="card">
 				<div class="card__img"></div>
 
-				<div class="card__name">@Model[i].Name</div>
+				<div class="card__name">@game.Name</div>
 
 				<div class="card__info">
-					<div class="card__info__price">@Model[i].Price P</div>
+					<div class="card__info__price">@game.Price P</div>
 
 					<div class="card__info__discount">34 %</div>
 				</div>
