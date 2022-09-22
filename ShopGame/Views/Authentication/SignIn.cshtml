@@ -43,18 +43,19 @@
           <button type="submit"  name="button" class="sign-up__btn">Войти</button>
 
 
-          <div class="create__acc">У вас нет аккаунта? <a class="create__acc__link"> зарегестрироваться</a></div>
+          <div class="create__acc">У вас нет аккаунта? <a class="create__acc__link" asp-controller="Authentication" asp-action="Registration"> зарегестрироваться</a></div>
 
           <div class="create__acc__soc">Авторизация через соц сети</div>
 
           <div class="soc-net">
-            <img class="soc-net__icon" src="discord.svg"></img>
-            <img class="soc-net__icon" src="discord.svg"></img>
-            <img class="soc-net__icon" src="discord.svg"></img>
-            <img class="soc-net__icon" src="discord.svg"></img>
+                <img class="soc-net__icon" src="~/icons/discord.svg" />
+                <img class="soc-net__icon" src="~/icons/telegram.svg" />
+                <img class="soc-net__icon" src="~/icons/vk.svg" />
+                <img class="soc-net__icon" src="~/icons/youtube.svg" />
           </div>
 
         </form>
     </div>
+    <script src="~/js/SignIn.js"></script>
 </body>
 </html>

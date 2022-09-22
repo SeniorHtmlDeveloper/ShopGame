@@ -147,6 +147,7 @@ body {
     margin-top: 80px;
     border-radius: 30px;
     font-size: 22px;
+    
 }
 
 
@@ -207,6 +208,7 @@ body {
     transition: all 0.2s ease;
     margin-left: 9px;
     color: #fbbb43;
+    cursor: pointer;
 }
 
     .sign-in__link:hover {
