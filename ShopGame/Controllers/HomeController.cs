@@ -12,6 +12,14 @@ namespace ShopGame.Controllers
         {
             _logger = logger;
             db = context;
+            FixedImageUrl(db);
+        }
+
+        public void FixedImageUrl(ShopContext context)
+        {
+            var games = db.Games.ToList();
+            foreach (var game in games)
+                game.Image = "https://" + game.Image;
         }
 
         public List<Game> GetGames()
@@ -43,7 +51,7 @@ namespace ShopGame.Controllers
 
         public IActionResult Main()
         {
-            var games = GetGames();
+            var games = db.Games.ToList();
             return View(games);
         }
 
