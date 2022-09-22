@@ -18,6 +18,47 @@
     border: 1px solid #fff;
     background-color: #141111;
     color: #fff;
+    position: relative;
+}
+
+
+.card__inner{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    display: none;
+}
+
+
+
+.card__inner__dlc {
+    margin-top: 0px;
+    width: 40px;
+    height: 22px;
+    padding-top: 10px;
+    padding-left: 3px;
+    background-color: #fbbb43;
+    border-radius: 14px 0 15px 0;
+    text-align: center;
+    display: inline-block;
+   
+}
+
+
+.card__inner__like {
+    
+    margin-left: 90%;
+    margin-top: 30px;
+}
+
+
+.card__inner__btn {
+    height: 30px;
+    background-color: #fbbb43;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 55%;
+    width: 80px;
 }
 
 

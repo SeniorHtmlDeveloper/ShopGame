@@ -5,6 +5,14 @@
 	<div class="list__card">
 		@foreach(var game in Model){
 			<div class="card">
+				<div class="card__inner">
+					<div class="card__inner__dlc">DLC</div>
+
+					<img class="card__inner__like" src="~/icons/heart.svg"></img>
+
+					<div class="card__inner__btn">В корзину</div>
+				</div>
+
 				<div class="card__img"></div>
 
 				<div class="card__name">@game.Name</div>
