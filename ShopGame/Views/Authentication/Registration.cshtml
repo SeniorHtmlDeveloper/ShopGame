@@ -5,22 +5,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign In</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="~/css/Registration.css" />
 </head>
 <body>
     <div class="container">
-        <h1>Регистрация</h1>
-        <form class="registretion">
-            <label type="text" class="formlab">Имя пользователя</label>
-            <input class="formfield"></input>
-            <label class="formlab">Пароль</label>
-            <input type="password" class="formfield"></input>
-            <label class="formlab">Повторите пароль</label>
-            <input type="password" class="formfield"></input>
-        </form> 
+        <h1 class="container__title">Регистрация</h1>
+
+        <!-- форма регистрации -->
+
+        <form class="reg">
+
+          <!-- класc так называется так потому что я далбаеб и поменять все щас будет сложно -->
+
+          <div class="reg__setting">
+
+            <!-- в рег иннер у нас будет рапологаться 1 лабел и один инпут -->
+            <!-- первый лабел -->
+            
+            <div class="reg__inner" id="reg__inner__1">
+              <label type="text" class="form__lab">Имя пользователя</label>
+              <input class="form__field"></input>
+            </div>
+
+            <!-- второй лабел -->
+            <div class="reg__inner" id="reg__inner__2">
+              <label class="form__lab">Пароль</label>
+              <input type="password" class="form__field"></input>
+            </div>
+
+            <!-- третий лабел -->
+            <div class="reg__inner" id="reg__inner__3">
+              <label class="form__lab">Повторите пароль</label>
+              <input type="password" class="form__field"></input>
+            </div>
+          </div>
+
+          <!-- Кнопка  -->
+
+          <button type="submit"  name="button" class="reg__btn">Зарегестрироваться</button>
+
+
+          <div class="forgot__pass">Забыли пароль?</div>
+
+
+          <div class="recover__pass">Восстановить</div>
+
+          <div class="sign-in">У вас есть аккаунт?<p class="sign-in__link">Войти</p></div>
+        </form>
+
+
+
     </div>
-    
     
 </body>
 </html>

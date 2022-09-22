@@ -9,6 +9,52 @@
     <link rel="stylesheet" href="~/css/SignIn.css" />
 </head>
 <body>
+    <div class="container">
+        <h1 class="container__title">Авторизация</h1>
 
+        <!-- форма регистрации -->
+
+        <form class="sign-up">
+
+          <!-- клас для называется так потому что я далбаеб и поменять все щас будет сложно -->
+
+          <div class="sign-u__setting">
+
+            <!-- в рег иннер у нас будет рапологаться 1 лабел и один инпут -->
+            <!-- первый лабел -->
+
+            <div class="sign-up__inner" id="sign-up__inner__1">
+              <label type="text" class="form__lab">Имя пользователя</label>
+              <input class="form__field"></input>
+            </div>
+
+
+            <!-- второй лабел -->
+
+            <div class="sign-up__inner" id="sign-up__inner__2">
+              <label class="form__lab">Пароль</label>
+              <input type="password" class="form__field"></input>
+            </div>
+
+          </div>
+
+          <!-- Кнопка  -->
+
+          <button type="submit"  name="button" class="sign-up__btn">Войти</button>
+
+
+          <div class="create__acc">У вас нет аккаунта? <a class="create__acc__link"> зарегестрироваться</a></div>
+
+          <div class="create__acc__soc">Авторизация через соц сети</div>
+
+          <div class="soc-net">
+            <img class="soc-net__icon" src="discord.svg"></img>
+            <img class="soc-net__icon" src="discord.svg"></img>
+            <img class="soc-net__icon" src="discord.svg"></img>
+            <img class="soc-net__icon" src="discord.svg"></img>
+          </div>
+
+        </form>
+    </div>
 </body>
 </html>
