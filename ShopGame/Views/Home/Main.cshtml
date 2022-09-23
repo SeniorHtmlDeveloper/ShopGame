@@ -13,12 +13,10 @@
 						</div>
 
 						@*тут кнопка корзины*@
-					<a class="card__inner__btn">В корзину</a>
+					<a asp-controller="Home" asp-action="AddOrder" asp-route-GameId="@game.GameId"><div class="card__inner__btn">В корзину</div></a>
 
 					@*тут блок в виде ссылки *@
-					<a class="card__inner__shadow">
-						
-					</a>
+				<a asp-controller="Home" asp-action="GamePage" asp-route-GameId="@game.GameId"><div class="card__inner__shadow"></div></a>
 				</div>
 
 				<img class="card__img" src="@game.Image"></img>
