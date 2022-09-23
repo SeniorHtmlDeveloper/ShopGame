@@ -1,7 +1,15 @@
 ﻿.game__info {
 }
 
+.game__page {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 170px;
+    padding-top: 50px;
+}
+
 .game__img {
+    
     width: 370px;
     height: 460px;
     border-radius: 10px;
@@ -33,6 +41,7 @@
 
 
 .game__buy {
+    width: 900px;
 }
 
 .game__name {
@@ -43,7 +52,7 @@
 }
 
 .price {
-    max-width: 200px;
+    max-width: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;

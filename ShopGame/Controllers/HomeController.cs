@@ -54,21 +54,10 @@ namespace ShopGame.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [AllowAnonymous]
+        
         public IActionResult Main()
         {
-            if (User.Identity != null && User.Identity.IsAuthenticated)
-            {
-                ViewData["ButtonContent"] = "ВЫЙТИ";
-                ViewData["UserName"] = User.Identity.Name;
-                ViewData["Action"] = "Logout";
-
-            }
-            else
-            {
-                ViewData["ButtonContent"] = "ВОЙТИ";
-                ViewData["Action"] = "SignIn";
-            }
+            IsLogin();
             var games = db.Games.ToList();
             return View(games);
         }
@@ -77,6 +66,7 @@ namespace ShopGame.Controllers
 
         public IActionResult GamePage(int GameId)
         {
+            IsLogin();  
             var game = db.Games.Find(GameId);
             return View(game);
         }
@@ -93,6 +83,23 @@ namespace ShopGame.Controllers
             }
 
             return RedirectToAction("Main", "Home");
+        }
+
+        [AllowAnonymous]
+        public void IsLogin()
+        {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                ViewData["ButtonContent"] = "ВЫЙТИ";
+                ViewData["UserName"] = User.Identity.Name;
+                ViewData["Action"] = "Logout";
+
+            }
+            else
+            {
+                ViewData["ButtonContent"] = "ВОЙТИ";
+                ViewData["Action"] = "SignIn";
+            }
         }
     }
 }
