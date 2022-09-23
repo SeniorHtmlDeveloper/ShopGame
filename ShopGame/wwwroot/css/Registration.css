@@ -132,7 +132,9 @@ body {
         border: none;
     }
 
-
+    .form__field:focus {
+        background: #141111;
+    }
 
 /* кнопка регистрации */
 

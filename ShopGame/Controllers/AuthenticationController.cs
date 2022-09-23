@@ -50,7 +50,7 @@ namespace ShopGame.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SignIn(LoginModel model)
         {
-            Console.WriteLine($"------------------{model.UserName}--------------------------");
+            
 
             if (ModelState.IsValid)
             {
