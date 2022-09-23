@@ -17,7 +17,10 @@
                         <input class="header__input" type="text" placeholder="Поиск...">
                     </div>
                     <nav class="nav">
-                        <a asp-controller="Authentication" asp-action="SignIn"><button class="nav__btn">ВОЙТИ</button></a>
+
+                        @ViewData["UserName"]
+                        <a asp-controller="Authentication" asp-action="@ViewData["Action"]"><button class="nav__btn">@ViewData["ButtonContent"]</button></a>
+                        
                         <a href="#" class="nav__link"><img style="width; 33px; height: 33px;" src="~/icons/heart.svg" class="icons" alt=""></a>
                         <a href="#" class="nav__link"><img style="width; 33px; height: 33px;" src="~/icons/shop.svg" class="icons" alt=""></a>
                     </nav>

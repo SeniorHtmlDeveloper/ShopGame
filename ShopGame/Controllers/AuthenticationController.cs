@@ -78,7 +78,7 @@ namespace ShopGame.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = await db.Users.FirstOrDefaultAsync(u => u.UserName == model.UserName);
+                User? user = await db.Users.FirstOrDefaultAsync(u => u.UserName == model.UserName);
                 if (user == null)
                 {
                     // добавляем пользователя в бд
@@ -97,11 +97,12 @@ namespace ShopGame.Controllers
 
         private async Task Authenticate(string userName)
         {
-            // создаем один claim
-            var claims = new List<Claim>
-            {
+
+            //создаем один claim
+           var claims = new List<Claim>
+           {
                 new Claim(ClaimsIdentity.DefaultNameClaimType, userName)
-            };
+           };
             // создаем объект ClaimsIdentity
             ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
             // установка аутентификационных куки
@@ -111,8 +112,9 @@ namespace ShopGame.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Main", "Home");
         }
+
 
     }
 }

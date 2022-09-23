@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ShopGame.Models;
+using System;
 using System.Diagnostics;
 
 namespace ShopGame.Controllers
@@ -8,6 +10,8 @@ namespace ShopGame.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         ShopContext db;
+
+
         public HomeController(ILogger<HomeController> logger, ShopContext context)
         {
             _logger = logger;
@@ -49,16 +53,30 @@ namespace ShopGame.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [AllowAnonymous]
         public IActionResult Main()
         {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                ViewData["ButtonContent"] = "ВЫЙТИ";
+                ViewData["UserName"] = User.Identity.Name;
+                ViewData["Action"] = "Logout";
+
+            }
+            else
+            {
+                ViewData["ButtonContent"] = "ВОЙТИ";
+                ViewData["Action"] = "SignIn";
+            }
             var games = db.Games.ToList();
             return View(games);
         }
 
+        
+
         public IActionResult GamePage(int GameId)
         {
             var game = db.Games.Find(GameId);
-            Console.WriteLine($"-------------------------{GameId}-------------------------");
             return View(game);
         }
 
