@@ -1,4 +1,4 @@
-﻿
+﻿@model RegisterModel
 @{
     Layout = null;
 }
@@ -14,7 +14,8 @@
 
         <!-- форма регистрации -->
 
-        <form class="reg" method="post">
+        <form class="reg" asp-action="Registration" asp-controller="Authentication" asp-anti-forgery="true">
+            <div class="validation" asp-validation-summary="ModelOnly"></div>
 
           <!-- класc так называется так потому что я далбаеб и поменять все щас будет сложно -->
 
@@ -24,20 +25,20 @@
             <!-- первый лабел -->
             
             <div class="reg__inner" id="reg__inner__1">
-              <label type="text" class="form__lab">Имя пользователя</label>
-              <input class="form__field" name="userName"></input>
+              <label type="text" class="form__lab" asp-for="UserName">Имя пользователя</label>
+              <input class="form__field" name="userName" asp-for="UserName"></input>
             </div>
 
             <!-- второй лабел -->
             <div class="reg__inner" id="reg__inner__2">
-              <label class="form__lab">Пароль</label>
-              <input type="password" class="form__field" name="password"></input>
+              <label class="form__lab" asp-for="Password">Пароль</label>
+              <input type="password" class="form__field" name="password" asp-for="Password"></input>
             </div>
 
             <!-- третий лабел -->
             <div class="reg__inner" id="reg__inner__3">
-              <label class="form__lab">Повторите пароль</label>
-              <input type="password" class="form__field"></input>
+              <label class="form__lab" asp-for="ConfirmPassword">Повторите пароль</label>
+              <input type="password" class="form__field" asp-for="ConfirmPassword"></input>
             </div>
           </div>
 
