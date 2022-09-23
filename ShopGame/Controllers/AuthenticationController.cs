@@ -5,11 +5,11 @@ namespace ShopGame.Controllers
 {
     public class AuthenticationController : Controller
     {
-        ShopContext context;
+        ShopContext db;
 
         public AuthenticationController(ShopContext _context)
         {
-            this.context = _context;
+            db = _context;
         }
 
         public IActionResult Index()
@@ -26,5 +26,15 @@ namespace ShopGame.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Registration(string userName, string password)
+        {
+            var user = new User() { UserName = userName, Password = password };
+            db.Users.Add(user);
+            db.SaveChanges();
+            return Redirect(@"https://localhost:7095/");
+        }
+
     }
 }

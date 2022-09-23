@@ -55,6 +55,16 @@ namespace ShopGame.Controllers
             return View(games);
         }
 
+        public IActionResult GamePage(int GameId)
+        {
+            var game = db.Games.Find(GameId);
+            Console.WriteLine($"-------------------------{GameId}-------------------------");
+            return View(game);
+        }
 
+        public void AddOrder(int GameId)
+        {
+
+        }
     }
 }
