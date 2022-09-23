@@ -1,5 +1,98 @@
 ﻿@model Game
 @{
 }
-<h1>@Model.Name</h1>
-<h1>@Model.Price</h1>
+<div class="game__info">
+					<img src="/images/gameImg.png" alt="" class="game__img">
+					<div class="game__about">
+						<div>
+							<div class="id">Жанр</div>
+							<div class="id">Платформа</div>
+							<div class="id">Дата выхода</div>
+							<div class="id">Издатель</div>
+							<div class="id">Разработчик</div>
+						</div>
+						<div>
+							<div class="value">Жанр</div>
+							<div class="value">Platform</div>
+							<div class="value">Date</div>
+							<div class="value">Sozdatel</div>
+							<div class="value">Razrab</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="game__buy">
+					<h1 class="game__name">
+						НАЗЫВАНИЕ ЕБУЧЕЙ ИГРЫ И ТАК ДАЛЕЕ
+					</h1>
+					<div class="price">
+						<button class="bag">В КОРЗИНУ</button>
+						<div class="cena">150 ₽</div>
+					</div>
+
+					<div class="activate">
+						<div class="acts">
+							<div class="act__text">Поддержка языков</div>
+							<div class="act__subtext">Русский (интерфейс)</div>
+						</div>
+						<div class="acts">
+							<div class="act__text">Регион активации</div>
+							<div class="act__subtext">Россия, Украина и СНГ</div>
+						</div>
+						<div class="acts">
+							<div class="act__text">Сервис активации</div>
+							<div class="act__subtext">Steam</div>
+						</div>
+					</div>
+					<div class="tab">
+						<button class="tab__btn" data-tab="#tab__one">ОБ ИГРЕ</button>
+						<button class="tab__btn" data-tab="#tab__two">СИСТЕМНЫЕ ТРЕБОВАНИЯ</button>
+						<button class="tab__btn" data-tab="#tab__three">АКТИВАЦИЯ</button>
+						<div class="tab__item" id="tab__one">
+							<h2 class="tab__title">Беззаботный модерн</h2>
+							<p class="tab__text">Paradox любят официально включать в свои продукты работы пользователей, отчего в выигрыше оказываются абсолютно все. Mid-Century Modern — это архитектурный набор за авторством мододела REV0. Он придаст вашим городам немного модернистского шарма и создаст в пригороде беззаботную атмосферу шестидесятых. В нём вы найдёте уникальные стили районов, закусочные, отели и всевозможные украшения. В сумме это около 150 новых объектов!</p>
+						</div>
+						<div class="tab__item" id="tab__two">
+							<h2 class="tab__title">Системные требования</h2>
+							<div class="characteristics">
+								<div>
+									<div class="id">ОС</div>
+									<div class="id">Процессор</div>
+									<div class="id">Оперативная память</div>
+									<div class="id">Видеокарта</div>
+									<div class="id">DirectX</div>
+									<div class="id">Сеть</div>
+									<div class="id">Место на диске</div>
+									<div class="id">Дополнительно</div>
+								</div>
+								<div>
+									<div class="value">Windows 10 (64-разрядная)</div>
+									<div class="value">
+										Intel® Core™ I7 2700K | AMD® Ryzen 7 2700X</div>
+									<div class="value">
+										16 ГБ ОЗУ</div>
+									<div class="value">Nvidia® GeForce™ GTX 580 (1.5 ГБ) | AMD® Radeon™ RX 560 (4 ГБ)</div>
+									<div class="value">
+										Версии 11</div>
+									<div class="value">
+										Широкополосное подключение к интернету</div>
+									<div class="value">
+										4 ГБ</div>
+									<div class="value">
+										Требуются 64-разрядные процессор и операционная система</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab__item" id="tab__three">
+							<ol class="act__list">
+								<li class="act__item">Скопируйте ключ приобретённой игры из раздела «Заказы» в личном кабинете.</li>
+								<li class="act__item">Если у вас не установлен клиент Steam, скачайте и установите его.</li>
+								<li class="act__item">Войдите в свой аккаунт Steam или зарегистрируйте новый, если у вас его нет.</li>
+								<li class="act__item">Перейдите в раздел «Игры» и выберите «Активировать через Steam...».</li>
+								<li class="act__item">Введите ключ активации.</li>
+								<li class="act__item">После этого игра будет в вашей библиотеке Steam, и вы сможете её скачать</li>
+							</ol>
+						</div>
+					</div>
+				</div>
