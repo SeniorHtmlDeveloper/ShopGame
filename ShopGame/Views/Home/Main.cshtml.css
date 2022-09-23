@@ -22,17 +22,39 @@
 }
 
 
-.card__inner{
+.card__inner {
     width: 100%;
     position: absolute;
     height: 100%;
-    
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
 
-.card__inner__top{
+
+.card__inner__shadow {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 900;
+}
+
+
+
+.card__inner:hover{
+    opacity: 1;
+}
+
+
+
+
+.card__inner__top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 130px;
+    opacity: 0.9;
 }
 
 
@@ -60,18 +82,16 @@
 
 
 .card__inner__btn {
-    
-    
-    padding: 14px 20px;
+    padding: 11px 20px;
     color: #000;
     padding-top: 10px;
     border-radius: 7px;
     background-color: #fbbb43;
     text-align: center;
     margin: 0 auto;
-    margin-top: 65%;
+    margin-left: 27%;
+    margin-right: 26%;
     width: 80px;
-    opacity: 0.9;
 }
 
 
@@ -86,7 +106,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 10px;
-    box-shadow: 
+    height: 40px;
 }
 
 .card__info{
