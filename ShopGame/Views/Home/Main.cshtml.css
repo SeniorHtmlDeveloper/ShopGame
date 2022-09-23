@@ -32,17 +32,6 @@
 
 
 
-.card__inner__shadow {
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.3;
-    position: absolute;
-    z-index: 900;
-}
-
-
-
 .card__inner:hover{
     opacity: 1;
 }
@@ -89,10 +78,25 @@
     background-color: #fbbb43;
     text-align: center;
     margin: 0 auto;
+    position: absolute;
+    z-index: 1000;
     margin-left: 27%;
     margin-right: 26%;
     width: 80px;
 }
+
+
+
+.card__inner__shadow {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 900;
+    top: 0;
+}
+
 
 
 .card__img {
