@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ShopGame.Models;
 using System;
 using System.Diagnostics;
@@ -81,18 +80,9 @@ namespace ShopGame.Controllers
             return View(game);
         }
 
-        [AllowAnonymous]
-        public IActionResult AddOrder(int GameId)
+        public void AddOrder(int GameId)
         {
-            if (User.Identity != null)
-            {
-                User? user = db.Users.FirstOrDefault(item => item.UserName == User.Identity.Name);
-                Game game = db.Games.Find(GameId);
-                var order = new Order() { User = user, Games = new List<Game>() { game } };
-                
-            }
 
-            return RedirectToAction("Main", "Home");
         }
     }
 }
