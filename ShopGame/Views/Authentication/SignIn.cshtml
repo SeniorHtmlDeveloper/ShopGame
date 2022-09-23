@@ -1,4 +1,4 @@
-﻿
+﻿@model LoginModel
 @{
     Layout = null;
 }
@@ -14,9 +14,11 @@
 
         <!-- форма регистрации -->
 
-        <form class="sign-up">
+        <form class="sign-up" asp-action="SignIn" asp-controller="Authentication" asp-anti-forgery="true">
 
           <!-- клас для называется так потому что я далбаеб и поменять все щас будет сложно -->
+
+          <div asp-validation-summary="ModelOnly"></div>
 
           <div class="sign-u__setting">
 
@@ -24,16 +26,18 @@
             <!-- первый лабел -->
 
             <div class="sign-up__inner" id="sign-up__inner__1">
-              <label type="text" class="form__lab">Имя пользователя</label>
-              <input class="form__field"></input>
+              <label type="text" class="form__lab" asp-for="UserName">Имя пользователя</label>
+              <input class="form__field" asp-for="UserName"></input>
+              <span asp-validation-for="UserName"></span>
             </div>
 
 
             <!-- второй лабел -->
 
             <div class="sign-up__inner" id="sign-up__inner__2">
-              <label class="form__lab">Пароль</label>
-              <input type="password" class="form__field"></input>
+              <label class="form__lab" asp-for="Password">Пароль</label>
+              <input type="password" class="form__field" asp-for="Password"></input>
+              <span asp-validation-for="Password"></span>
             </div>
 
           </div>
