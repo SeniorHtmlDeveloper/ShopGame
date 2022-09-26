@@ -4,17 +4,6 @@ const inputTags = document.getElementsByTagName("input");
 
 
 
-
-
-
-for (let i = 0; i < inputList.length; i++) {
-    inputList[i].addEventListener('click', function () {
-        labelList[i].classList.add('form__lab__active');
-        console.log('add');
-    })
-}
-
-
 document.addEventListener('click', function (e) {
     const box = e.composedPath().includes(document.querySelector("#reg__inner__1"))
     if (!box && !inputTags[0].value) {
@@ -41,3 +30,11 @@ document.addEventListener('click', function (e) {
         console.log('remove');
     }
 })
+
+
+for (let i = 0; i < inputList.length; i++) {
+    inputList[i].addEventListener('click', function () {
+        labelList[i].classList.add('form__lab__active');
+        console.log('add');
+    })
+}
