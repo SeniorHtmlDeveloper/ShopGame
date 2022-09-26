@@ -6,10 +6,12 @@ namespace ShopGame.Models
     {
         public DbSet<Game> Games { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Order> Orders { get; set; }
         
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
             Database.EnsureCreated();
         }
+
     }
 }

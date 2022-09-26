@@ -19,8 +19,8 @@
 				<a asp-controller="Home" asp-action="GamePage" asp-route-GameId="@game.GameId"><div class="card__inner__shadow"></div></a>
 				</div>
 
-				<img class="card__img" src="@game.Image"></img>
-
+				<img class="card__img" src="@game.Image" />
+			<div class="img__wrapper"></div>
 				<div class="card__name">@game.Name</div>
 
 				<div class="card__info">
@@ -31,3 +31,5 @@
 			</div>
 		}
 	</div>
+
+@section Styles{<link rel="stylesheet" href="~/css/Main.css" />"}

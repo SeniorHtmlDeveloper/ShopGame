@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/ShopGame.styles.css" />
+    <link rel="stylesheet" href="~/css/Layout.css" />
+    @await RenderSectionAsync("Styles", required: false)
     <title>@ViewData["Title"] - ShopGame</title> 
 </head>
-<body style="margin:0;">
+<body>
     <div class="page">
         <header class="header">
             <div class="container">
@@ -18,11 +19,11 @@
                     </div>
                     <nav class="nav">
 
-                        @ViewData["UserName"]
-                        <a asp-controller="Authentication" asp-action="@ViewData["Action"]"><button class="nav__btn">@ViewData["ButtonContent"]</button></a>
+                        <div class="user__name">@ViewData["UserName"]</div>
+                        <a class="nav__btn" asp-controller="Authentication" asp-action="@ViewData["Action"]">@ViewData["ButtonContent"]</a>
                         
-                        <a href="#" class="nav__link"><img style="width; 33px; height: 33px;" src="~/icons/heart.svg" class="icons" alt=""></a>
-                        <a href="#" class="nav__link"><img style="width; 33px; height: 33px;" src="~/icons/shop.svg" class="icons" alt=""></a>
+                        <a href="#" class="nav__link"><img  src="~/icons/heart.svg" class="icons" alt=""></a>
+                        <a href="#" class="nav__link"><img src="~/icons/shop.svg" class="icons" alt=""></a>
                     </nav>
                 </div>
             </div>
@@ -51,10 +52,10 @@
                         <a href="#" class="footer__link">О компании</a>
                     </div>
                     <div class="soc__net">
-                        <img style="width: 30px; height: 30px; padding: 10px;" class="soc-net__icon" src="~/icons/vk.svg" />
-                        <img style="width: 30px; height: 30px; padding: 10px;" class="soc-net__icon" src="~/icons/telegram.svg" />
-                        <img style="width: 30px; height: 30px; padding: 10px;" class="soc-net__icon" src="~/icons/youtube.svg" />
-                        <img style="width: 30px; height: 30px; padding: 10px;" class="soc-net__icon" src="~/icons/discord.svg" />
+                        <img class="soc-net__icon" src="~/icons/vk.svg" />
+                        <img class="soc-net__icon" src="~/icons/telegram.svg" />
+                        <img class="soc-net__icon" src="~/icons/youtube.svg" />
+                        <img class="soc-net__icon" src="~/icons/discord.svg" />
                     </div>
                 </div>
             </div>

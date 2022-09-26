@@ -65,17 +65,27 @@ namespace ShopGame.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult AddOrder(int GameId)
+        public void AddOrder(int GameId)
         {
             if (User.Identity != null)
             {
                 User? user = db.Users.FirstOrDefault(item => item.UserName == User.Identity.Name);
-                Game game = db.Games.Find(GameId);
-                var order = new Order() { User = user, Games = new List<Game>() { game } };
+                Game? game = db.Games.Find(GameId);
+                Console.WriteLine($"------------------------------------{game}-------------------");
+                var order = new Order();
+                if (order.Games != null)
+                    order.Games.Add(game);
+                else
+                    order.Games = new List<Game> { game };
+                if (user.Orders != null)
+                    user.Orders.Add(order);
+                else
+                    user.Orders = new List<Order>() { order };
+                db.Orders.Add(order);
+                db.SaveChanges();
                 
             }
 
-            return RedirectToAction("Main", "Home");
         }
 
         [AllowAnonymous]
