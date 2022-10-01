@@ -67,7 +67,7 @@ namespace ShopGame.Controllers
         [AllowAnonymous]
         public void AddOrder(int GameId)
         {
-            if (User.Identity != null)
+            if (User.Identity != null && User.Identity.IsAuthenticated)
             {
                 User? user = db.Users.FirstOrDefault(item => item.UserName == User.Identity.Name);
                 Game? game = db.Games.Find(GameId);
